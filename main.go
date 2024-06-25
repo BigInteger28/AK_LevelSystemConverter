@@ -25,8 +25,8 @@ if level < 38 {
 }
 
 func main() {
-var elomultiplier uint64 = 80
-var elostart uint64 = 720
+var elomultiplier uint64 = 75
+var elostart uint64 = 800
 var level, nodes,elo uint64
 			var colors = []string{"White", "Yellow", "Salmon", "Orange", "Lime", "Green", "Cyan", "Blue", "Dark_Blue", "Magenta", "Purple", "Indigo", "Brown", "Red", "Dark_Red", "Black"}
 for{
