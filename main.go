@@ -26,7 +26,7 @@ if level < 38 {
 
 func main() {
 var elomultiplier uint64 = 80
-var elostart uint64 = 700
+var elostart uint64 = 720
 var level, nodes,elo uint64
 			var colors = []string{"White", "Yellow", "Salmon", "Orange", "Lime", "Green", "Cyan", "Blue", "Dark_Blue", "Magenta", "Purple", "Indigo", "Brown", "Red", "Dark_Red", "Black"}
 for{
@@ -37,7 +37,7 @@ for{
        upperelo := (level*elomultiplier)+elostart 
        elo = ((level-1)*elomultiplier)+elostart
 				fmt.Println("Level", input[:len(input)-1], " Tier", ((level-1)/16)+1, colors[(level-1)%16], " --> ", nodes, "nodes")
-        fmt.Println(elo, " ELO -", upperelo-1, "ELO")
+        fmt.Println(elo, "ELO -", upperelo-1, "ELO")
 			} else if input[len(input)-1:] == "n" {
 				nodes, _ = strconv.ParseUint(input[0:len(input)-1], 10, 64)
 				if nodes <= 200 {
@@ -57,8 +57,8 @@ for{
        uppernodes := getNodes(level+1)
        lowerelo := ((level-1)*elomultiplier)+elostart
        elo = lowerelo+((elomultiplier*(nodes-lowernodes))/(uppernodes-lowernodes))
-				fmt.Println(input[:len(input)-1], "n --> Level", level, "Tier", ((level-1)/16)+1, colors[(level-1)%16])
-fmt.Println(elo, " ELO")
+				fmt.Println(input[:len(input)-1], "Nodes --> Level", level, "Tier", ((level-1)/16)+1, colors[(level-1)%16])
+fmt.Println(elo, "ELO")
 } else {
      elo, _ = strconv.ParseUint(input[0:len(input)-1], 10, 64)
      if elo <= elostart {
