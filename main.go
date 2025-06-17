@@ -29,7 +29,7 @@ func main() {
 	var elostart uint64 = 800
 	var level, nodes, elo uint64
 	var colors = []string{
-		"White", "Grey", "Yellow", "Ochre Yellow", "Salmon", "Orange", "Lime", "Mint", "Green", "Teal Green", "Cyan", "Blue", "Dark_Blue", "Pink", "Magenta", "Bright Lavender", "Purple", "Indigo", "Olive", "Taupe", "Brown", "Red", "Crimson", "Dark_Red", "Black",
+		"White", "Brown", "Grey", "Taupe", "Olive", "Black", "Yellow", "Green", "Lime", "Mint", "Teal_Green", "Blue", "Dark_Blue", "Red", "Crimson", "Dark_Red", "Ochre", "Orange", "Bright_Lavender", "Purple", "Turquoise", "Cyan", "Pink", "Magenta", "Salmon",
 	}
 	for {
 		input := getUserInput("\nLevel/Nodes/ELO/tabel tot level (..l / ..n / ..e / ..t): ")
